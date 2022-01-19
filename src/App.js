@@ -1,13 +1,15 @@
 import React from 'react';
 import { marked } from 'marked';
+import DOMPurify from 'dompurify';
 
 function App() {
   const [value, setValue] = React.useState('');
   const handleChange = (event) => {
     setValue(event.target.value);
   };
+  const sanitizer = DOMPurify.sanitize;
   const getRawMarkup = () => {
-    return { __html: marked(value) };
+    return { __html: sanitizer(marked(value)) };
   };
   return (
     <>
