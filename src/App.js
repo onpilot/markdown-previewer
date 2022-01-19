@@ -1,9 +1,13 @@
 import React from 'react';
+import { marked } from 'marked';
 
 function App() {
   const [value, setValue] = React.useState('');
   const handleChange = (event) => {
     setValue(event.target.value);
+  };
+  const getRawMarkup = () => {
+    return { __html: marked(value) };
   };
   return (
     <>
@@ -15,7 +19,7 @@ function App() {
         value={value}
         onChange={handleChange}
       ></textarea>
-      <div id="preview">{value}</div>
+      <div id="preview" dangerouslySetInnerHTML={getRawMarkup()}></div>
     </>
   );
 }
