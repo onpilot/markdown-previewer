@@ -12,9 +12,9 @@ const sanitizer = (dirty) => {
 };
 
 function App() {
-  const [value, setValue] = React.useState('');
-  const [loading, setLoading] = React.useState(true);
-  const [error, setError] = React.useState(null);
+  const [value, setValue] = useState('');
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   const handleChange = (event) => {
     setValue(event.target.value);
