@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { marked } from 'marked';
 import DOMPurify from 'dompurify';
+import sample from './initial.md';
 
 // parsing markdown on raw HTML markup input using marked.js
 const parseMarkdown = (rawMarkup) => {
@@ -28,7 +29,8 @@ function App() {
 
   useEffect(() => {
     fetch(
-      'https://raw.githubusercontent.com/markedjs/marked/e5796ecc435a30f96939e6a7b2229c14264b4bf8/docs/demo/initial.md'
+      sample
+      // 'https://raw.githubusercontent.com/markedjs/marked/e5796ecc435a30f96939e6a7b2229c14264b4bf8/docs/demo/initial.md'
     )
       .then((response) => {
         // console.log(response);
