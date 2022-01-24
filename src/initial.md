@@ -1,28 +1,27 @@
-# Markdown Previewer
+# Demo
 
-Built using `create-react-app` + `marked.js` + `github-markdown-css` by [onpilot](https://github.com/onpilot).
-
-## How To Use The Demo
+## How To Use
 
 1. Type in stuff on the left.
 2. See the live updates on the right.
 
 That's it. Pretty simple.
 
-## More samples?
+## Sample Usage
+
+This is a **bold text**.
 
 This is an `inline code`.
 
 ```
-I'm a code block
+You can write a code block
+like this
 ```
 
-> This is a blockquote
+> Before you marry a person, you should first make them use a computer with slow internet to see who they really are.
 
-Display an image with this format ![alt text](ImageFile.png 'Title')
+Display an image with this format ![alt text](sample-image.png)
 
-## Description
+## Quick reference to the Markdown syntax
 
-- **Preview:** A live display of the generated HTML as it would render in a browser.
-- **HTML Source:** The generated HTML before your browser makes it pretty.
-- **Quick Reference:** A brief run-down of how to format things using markdown.
+Visit this [Markdown cheatsheet](https://www.markdownguide.org/cheat-sheet/) page.
