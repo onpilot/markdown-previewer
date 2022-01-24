@@ -8,6 +8,11 @@ html {
 *:after {
   box-sizing: inherit;
 }
+:root {
+  --black: #121212;
+  --gray: #eaeaea;
+  --white: #ffffff;
+}
 .box {
   display: flex;
   flex-direction: column;
@@ -24,16 +29,16 @@ html {
 .header {
   flex-direction: column;
   justify-content: center;
-  height: 60px;
+  height: 80px;
 }
 .header h1,
 p {
-  color: #121212;
+  color: var(--black);
   margin: 0 auto;
 }
 .column {
   flex: 50%;
-  height: calc(100vh - (60px + 30px + 60px));
+  height: calc(100vh - (80px + 30px + 72px));
   /* (header height + (3 * row margin top & bottom) + footer height) */
   margin: 0 10px;
 }
@@ -47,21 +52,43 @@ p {
   width: 100%;
   height: 100%;
   overflow-y: scroll;
-  border: 1px solid black;
+  border: 1px solid var(--black);
   padding: 10px;
+  padding-bottom: 20px;
 }
 .footer {
   flex-direction: column;
   justify-content: center;
-  height: 60px;
+  height: 72px;
   font-weight: bold;
   font-size: 15px;
-  color: #121212;
+  color: var(--black);
+}
+.footer .branding {
+  margin: 0 auto 4px auto;
 }
 .footer a {
   padding: 0 4px;
   text-decoration: none;
   color: yellowgreen;
+}
+.footer a:hover {
+  color: var(--white);
+}
+.footer i {
+  font-size: 20px;
+  color: var(--black);
+  padding: 0 4px;
+}
+.footer i:hover {
+  color: var(--white);
+}
+.footer p {
+  font-size: 0.8rem;
+}
+code,
+pre {
+  background-color: var(--gray) !important;
 }
 /* Make an element 100% width without overflowing */
 /* .boxsizingBorder {
