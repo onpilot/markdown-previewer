@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { marked } from 'marked';
 import DOMPurify from 'dompurify';
 import sample from './initial.md';
+import './App.css';
 
 // parsing markdown on raw HTML markup input using marked.js
 const parseMarkdown = (rawMarkup) => {
@@ -59,17 +60,24 @@ function App() {
   }
 
   return (
-    <>
-      <textarea
-        name="editor"
-        id="editor"
-        cols="30"
-        rows="10"
-        value={value}
-        onChange={handleChange}
-      ></textarea>
-      <div id="preview" dangerouslySetInnerHTML={getRawMarkup()}></div>
-    </>
+    <div className="row">
+      <div className="column">
+        <textarea
+          name="editor"
+          id="editor"
+          className="boxsizingBorder"
+          value={value}
+          onChange={handleChange}
+        ></textarea>
+      </div>
+      <div className="column">
+        <div
+          id="preview"
+          className="boxsizingBorder"
+          dangerouslySetInnerHTML={getRawMarkup()}
+        ></div>
+      </div>
+    </div>
   );
 }
 
