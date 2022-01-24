@@ -13,9 +13,12 @@ This is a **bold text**.
 
 This is an `inline code`.
 
+You can write a code block like this:
+
 ```
-You can write a code block
-like this
+function test() {
+  console.log("notice the blank line before this function?");
+}
 ```
 
 Funny quote:
