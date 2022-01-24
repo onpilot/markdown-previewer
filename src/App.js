@@ -61,25 +61,50 @@ function App() {
   }
 
   return (
-    <div className="row">
-      <div className="column">
-        <textarea
-          name="editor"
-          id="editor"
-          className="boxsizingBorder"
-          value={value}
-          onChange={handleChange}
-        ></textarea>
+    <div className="box">
+      <div className="row header">
+        <h1>📄 Markdown Previewer</h1>
+        <p>Format your plain text into markdown</p>
       </div>
-      <div className="column">
-        <div
-          id="preview"
-          className="boxsizingBorder markdown-body"
-          dangerouslySetInnerHTML={getRawMarkup()}
-        ></div>
+      <div className="row">
+        <div className="column">
+          <textarea
+            name="editor"
+            id="editor"
+            className="boxsizingBorder"
+            value={value}
+            onChange={handleChange}
+          ></textarea>
+        </div>
+        <div className="column">
+          <div
+            id="preview"
+            className="boxsizingBorder markdown-body"
+            dangerouslySetInnerHTML={getRawMarkup()}
+          ></div>
+        </div>
+      </div>
+      <div className="row footer">
+        <p>Crafted with ❤️ in Indonesia by Idan</p>
+        <p>
+          Powered by
+          <a href="https://github.com/facebook/create-react-app">
+            create-react-app
+          </a>
+          +
+          <a href="https://github.com/gitname/react-gh-pages">react-gh-pages</a>
+          +<a href="https://marked.js.org">marked</a>+
+          <a href="https://github.com/sindresorhus/github-markdown-css">
+            github-markdown-css
+          </a>
+        </p>
       </div>
     </div>
   );
 }
+
+// interprets carriage returns and renders them as br
+// see: https://marked.js.org/using_advanced
+marked.setOptions({ breaks: true });
 
 export default App;

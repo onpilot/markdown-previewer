@@ -1,19 +1,41 @@
 html {
   box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
 }
 *,
 *:before,
 *:after {
   box-sizing: inherit;
 }
-
+.box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: tomato;
+}
 .row {
   display: flex;
-  height: 100vh;
+  width: calc(100% - 10px);
+  margin: 5px;
+  /* background-color: gray; */
+}
+.header {
+  flex-direction: column;
+  justify-content: center;
+  height: 60px;
+}
+.header h1,
+p {
+  color: #121212;
+  margin: 0 auto;
 }
 .column {
   flex: 50%;
-  margin: 10px;
+  height: calc(100vh - (60px + 30px + 60px));
+  /* (header height + (3 * row margin top & bottom) + footer height) */
+  margin: 0 10px;
 }
 .column #editor {
   width: 100%;
@@ -28,12 +50,22 @@ html {
   border: 1px solid black;
   padding: 10px;
 }
+.footer {
+  flex-direction: column;
+  justify-content: center;
+  height: 60px;
+  font-weight: bold;
+  font-size: 15px;
+  color: #121212;
+}
+.footer a {
+  padding: 0 4px;
+  text-decoration: none;
+  color: yellowgreen;
+}
 /* Make an element 100% width without overflowing */
-.boxsizingBorder {
+/* .boxsizingBorder {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-
-  /* add some extas here */
-  /* padding: 10px; */
-}
+} */
