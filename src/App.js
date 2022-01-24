@@ -3,6 +3,7 @@ import { marked } from 'marked';
 import DOMPurify from 'dompurify';
 import sample from './initial.md';
 import './App.css';
+import 'github-markdown-css';
 
 // parsing markdown on raw HTML markup input using marked.js
 const parseMarkdown = (rawMarkup) => {
@@ -73,7 +74,7 @@ function App() {
       <div className="column">
         <div
           id="preview"
-          className="boxsizingBorder"
+          className="boxsizingBorder markdown-body"
           dangerouslySetInnerHTML={getRawMarkup()}
         ></div>
       </div>
