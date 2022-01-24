@@ -1,6 +1,6 @@
 # Markdown Previewer
 
-Built using create-react-app + marked.js by [onpilot](https://github.com/onpilot).
+Built using `create-react-app` + `marked.js` + `github-markdown-css` by [onpilot](https://github.com/onpilot).
 
 ## How To Use The Demo
 
