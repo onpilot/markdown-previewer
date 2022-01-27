@@ -2,6 +2,14 @@
 
 This project was built as part of freeCodeCamp projects.
 
+## Key Functionality
+
+- [x] Parsing raw HTML markup into markdown
+- [x] Sanitize user input
+- [x] Live preview
+- [x] Fetching local file for initial demo text
+- [x] Reusable components
+
 ## Academic Honesty Policy
 
 I am obliged and morally bound to [freeCodeCamp Academic Honesty Policy](https://www.freecodecamp.org/news/academic-honesty-policy/).
